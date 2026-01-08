@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: "Courier New", monospace;
+  background: radial-gradient(circle at top, #111 0%, #050505 70%);
+  color: #d8d8d8;
+}
+
+/* Header */
+header {
+  margin-bottom: 4rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tagline {
+  color: #7a7a7a;
+  font-size: 0.9rem;
+}
+
+/* Navigation */
+.portal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.link {
+  position: relative;
+  width: fit-content;
+  font-size: 1.4rem;
+  color: #cfcfcf;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+}
+
+.link::before {
+  content: ">";
+  position: absolute;
+  left: -1.2rem;
+  color: #444;
+}
+
+.link:hover {
+  color: #ffffff;
+  text-shadow:
+    0 0 4px rgba(255,255,255,0.4),
+    0 0 12px rgba(150,150,150,0.2);
+}
+
+/* Subtle glitch */
+.link:hover::after {
+  content: attr(href);
+  position: absolute;
+  left: 2px;
+  top: 0;
+  color: rgba(255, 0, 0, 0.6);
+  mix-blend-mode: screen;
+}
+
+/* Footer */
+footer {
+  margin-top: 6rem;
+  font-size: 0.7rem;
+  color: #555;
+}
+.quote {
+  max-width: 500px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+.author {
+  display: block;
+  margin-top: 0.5rem;
+  color: #444;
+}
